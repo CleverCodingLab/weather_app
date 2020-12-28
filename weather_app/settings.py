@@ -25,7 +25,7 @@ SECRET_KEY = 'kjijt96j88ud*sfmb+5dhfx2d!fgiwlqus1l+gpx#inp8s!+fm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['weather-repo-app.herokuapp.com', 'http://127.0.0.1:8000']
+ALLOWED_HOSTS = ['weather-repo-app.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'weather_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,5 +125,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'core/static',
 ]
